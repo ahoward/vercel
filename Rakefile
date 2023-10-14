@@ -2,6 +2,7 @@ This.author = "Ara T. Howard"
 This.email = "ara.t.howard@gmail.com"
 This.github = "ahoward"
 This.homepage = "https://github.com/#{ This.github }/#{ This.name }"
+This.repo = "https://github.com/#{ This.github }/#{ This.name }"
 
 task :license do
   open('LICENSE', 'w'){|fd| fd.puts "Ruby"}
@@ -181,20 +182,21 @@ task :readme do
   version = This.version
 
   Dir['sample*/*'].sort.each do |sample|
-    samples << "  ###<========< #{ sample } >========>\n"
+    link = "[#{ This.repo }/blob/main/#{ sample }](./#{ sample })"
+    samples << "  ### <========< #{ link } >========>\n"
 
-    cmd = "cat #{ sample }"
+    cmd = "cat #{ link }"
     samples << "```sh\n"
-    samples << Util.indent(prompt + cmd, 2) << " #=>\n"
+    samples << Util.indent(prompt + cmd, 2) << "\n"
     samples << "```\n"
     samples << "```ruby\n"
-    samples << Util.indent(`#{ cmd }`, 4) << "\n"
+    samples << Util.indent(IO.binread(sample), 4) << "\n"
     samples << "```\n"
 
     samples << "\n"
 
     cmd = "ruby #{ sample }"
-    samples << Util.indent(prompt + cmd, 2) << " #=>\n"
+    samples << Util.indent(prompt + cmd, 2) << "\n"
 
     cmd = "ruby -e'STDOUT.sync=true; exec %(ruby -I ./lib #{ sample })'"
     oe = `#{ cmd } 2>&1`

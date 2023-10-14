@@ -22,30 +22,30 @@ DESCRIPTION
 
 SAMPLES
 =======
-  ###<========< samples/a.rb >========>
+  ### <========< [https://github.com/ahoward/Vercel/blob/main/samples/a.rb](./samples/a.rb) >========>
   ```sh
-  ~ > cat samples/a.rb #=>
+  ~ > cat [https://github.com/ahoward/Vercel/blob/main/samples/a.rb](./samples/a.rb)
   ```
   ```ruby
     require 'vercel'
     p 42
   ```
   
-  ~ > ruby samples/a.rb #=>
+  ~ > ruby samples/a.rb
   ```txt
     42
   ```
   
-  ###<========< samples/b.rb >========>
+  ### <========< [https://github.com/ahoward/Vercel/blob/main/samples/b.rb](./samples/b.rb) >========>
   ```sh
-  ~ > cat samples/b.rb #=>
+  ~ > cat [https://github.com/ahoward/Vercel/blob/main/samples/b.rb](./samples/b.rb)
   ```
   ```ruby
     require 'vercel'
     p Vercel
   ```
   
-  ~ > ruby samples/b.rb #=>
+  ~ > ruby samples/b.rb
   ```txt
     Vercel
   ```
