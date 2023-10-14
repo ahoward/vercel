@@ -32,8 +32,8 @@ SAMPLES
   ```
   
   ```sh
-  ```
   ~ > ruby samples/a.rb
+  ```
   ```txt
     42
   ```
@@ -48,8 +48,8 @@ SAMPLES
   ```
   
   ```sh
-  ```
   ~ > ruby samples/b.rb
+  ```
   ```txt
     Vercel
   ```

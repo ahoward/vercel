@@ -195,10 +195,10 @@ task :readme do
 
     samples << "\n"
 
-    samples << "```sh\n"
     cmd = "ruby #{ sample }"
-    samples << "```\n"
+    samples << "```sh\n"
     samples << Util.indent(prompt + cmd, 2) << "\n"
+    samples << "```\n"
 
     cmd = "ruby -e'STDOUT.sync=true; exec %(ruby -I ./lib #{ sample })'"
     oe = `#{ cmd } 2>&1`
