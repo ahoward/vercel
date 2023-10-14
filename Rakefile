@@ -185,7 +185,7 @@ task :readme do
     link = "[#{ sample }](#{ This.repo }/blob/main/#{ sample })"
     samples << "  #### <========< #{ link } >========>\n"
 
-    cmd = "cat #{ link }"
+    cmd = "cat #{ sample }"
     samples << "```sh\n"
     samples << Util.indent(prompt + cmd, 2) << "\n"
     samples << "```\n"
@@ -195,7 +195,9 @@ task :readme do
 
     samples << "\n"
 
+    samples << "```sh\n"
     cmd = "ruby #{ sample }"
+    samples << "```\n"
     samples << Util.indent(prompt + cmd, 2) << "\n"
 
     cmd = "ruby -e'STDOUT.sync=true; exec %(ruby -I ./lib #{ sample })'"

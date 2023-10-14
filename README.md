@@ -24,13 +24,15 @@ SAMPLES
 =======
   #### <========< [samples/a.rb](https://github.com/ahoward/Vercel/blob/main/samples/a.rb) >========>
   ```sh
-  ~ > cat [samples/a.rb](https://github.com/ahoward/Vercel/blob/main/samples/a.rb)
+  ~ > cat samples/a.rb
   ```
   ```ruby
     require 'vercel'
     p 42
   ```
   
+  ```sh
+  ```
   ~ > ruby samples/a.rb
   ```txt
     42
@@ -38,13 +40,15 @@ SAMPLES
   
   #### <========< [samples/b.rb](https://github.com/ahoward/Vercel/blob/main/samples/b.rb) >========>
   ```sh
-  ~ > cat [samples/b.rb](https://github.com/ahoward/Vercel/blob/main/samples/b.rb)
+  ~ > cat samples/b.rb
   ```
   ```ruby
     require 'vercel'
     p Vercel
   ```
   
+  ```sh
+  ```
   ~ > ruby samples/b.rb
   ```txt
     Vercel
