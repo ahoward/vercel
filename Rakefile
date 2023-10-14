@@ -182,8 +182,8 @@ task :readme do
   version = This.version
 
   Dir['sample*/*'].sort.each do |sample|
-    link = "[#{ This.repo }/blob/main/#{ sample }](./#{ sample })"
-    samples << "  ### <========< #{ link } >========>\n"
+    link = "[#{ sample }](#{ This.repo }/blob/main/#{ sample })"
+    samples << "  #### <========< #{ link } >========>\n"
 
     cmd = "cat #{ link }"
     samples << "```sh\n"
