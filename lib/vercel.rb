@@ -1,0 +1,2 @@
+module Vercel
+end
